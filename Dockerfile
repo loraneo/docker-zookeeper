@@ -1,4 +1,4 @@
-FROM loraneo/docker-java:8u144a
+FROM loraneo/docker-java:10.0.2a
 
 WORKDIR /opt
 
