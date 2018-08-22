@@ -14,6 +14,7 @@ RUN mkdir -p $ZOOKEEPER_HOME/data
 
 COPY config/zoo.cfg $ZOOKEEPER_HOME/conf/zoo.cfg
 EXPOSE 2181
-CMD $ZOOKEEPER_HOME/bin/zkServer.sh start-foreground
+CMD echo $MY_ID > /opt/zookeeper/data/myid && \
+	$ZOOKEEPER_HOME/bin/zkServer.sh start-foreground
 
 
